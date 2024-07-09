@@ -1,0 +1,44 @@
+@url = http://127.0.0.1:8000
+
+### users
+GET {{url}}/users
+Content-Type: application/json
+
+### Create user
+POST {{url}}/users
+Content-Type: application/json
+
+{
+  "username": "root_vortex",
+  "first_name": "root",
+  "last_name": "vortex",
+  "password": "root",
+  "confirm_password":"root"
+}
+
+### Get user by username
+GET {{url}}/users/root_vortex/
+Content-Type: application/json
+
+### Update User
+PUT {{url}}/users/root_vortex
+Content-Type: application/json
+
+{
+  "first_name": "Kamga"
+}
+
+
+### computer pour root vortex
+POST {{url}}/users/root_vortex/create-computer
+Content-Type: application/json
+
+{
+  "brand": "HP",
+  "model": "Elite book",
+  "price": 1500
+}
+
+### User with computer
+GET {{url}}/users/root_vortex/user-with-computer
+Content-Type: application/json
