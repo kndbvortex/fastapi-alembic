@@ -30,3 +30,4 @@ async def root():
 @app.get("/hello")
 async def gretting():
     return {"message": "Hello, FastAPI!"}
+
